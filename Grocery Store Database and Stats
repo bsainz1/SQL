@@ -1,0 +1,22 @@
+CREATE table santis (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price NUMERIC, aisle INTEGER);
+
+INSERT into santis VALUES 
+(1, 'cereal', 40, 6.99, 14),
+(2, 'lotion', 6, 9.99, 3),
+(3, 'apples', 30, 0.99, 1),
+(4, 'potatoes', 7, 1.99, 1),
+(5, 'motrin', 20, 12.99, 2),
+(6, 'kale', 5, 2.50, 1),
+(7, 'crackers', 25, 3.89, 12),
+(8, 'lightbulbs', 15, 2.99, 10),
+(9, 'trash bags', 20, 6.50, 11),
+(10, 'eggs', 3, 4.50, 4),
+(11, 'bread', 20, 3.99, 4),
+(12, 'peanut butter', 50, 5.99, 4),
+(13, 'oranges', 30, 2.50, 1),
+(14, 'milk', 25, 5.99, 3),
+(15, 'coffee', 15, 12.99, 9);
+
+SELECT * from santis ORDER BY price;
+SELECT SUM(price) from santis;
+
