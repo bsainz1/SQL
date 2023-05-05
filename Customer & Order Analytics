@@ -1,0 +1,13 @@
+SELECT distinct Product
+FROM BIT_DB.FebSales
+WHERE Product like '%Batteries%';
+
+SELECT distinct Product, Price
+FROM BIT_DB.FebSales 
+WHERE Price like '%.99';
+
+/* List all the products sold in Los Angeles in February, and include how many of each were sold.*/
+SELECT distinct Product, SUM(quantity)
+FROM BIT_DB.FebSales
+WHERE location like '%los angeles%'
+GROUP BY Product
